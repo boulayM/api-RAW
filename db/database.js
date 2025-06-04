@@ -12,18 +12,19 @@ const pool = mysql.createPool({
 
 // by default limit it to 100 results
 function getAllArtisans (){
-    return new Promise((resolve, reject) => {
+    return new Promise ((resolve, reject) => {
         const sql = `SELECT * FROM artisan`;
         pool.query(sql, function (err, results, fields) {
             if (err) {
-                return reject(err);
+                return reject (err);
             }
 
-
-            return resolve(results);
+            return resolve (results);
         });
     });
 }
+
+
 
 function getAllCategories () {
     return new Promise ((resolve, reject) => {
