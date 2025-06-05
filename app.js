@@ -25,7 +25,7 @@ app.set("view engine", "ejs");
 
 // The home page lists some available URLs.
 
-/*
+
 app.get("/", (req, res) => {
     res.json({
         urls: {
@@ -38,8 +38,8 @@ app.get("/", (req, res) => {
         
     });
 });
-*/
-app.get("/", (req, res) => {
+
+app.get("/artisans", (req, res) => {
     db.getAllArtisans()
         .then(data => res.json(data)) // if successful
         .catch(err => res.status(500).json(err)); // if error
