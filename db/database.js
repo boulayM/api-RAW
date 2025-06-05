@@ -8,6 +8,7 @@ const pool = mysql.createPool({
     host: process.env.MYSQL,
     user: process.env.MYSQL_USER,
     database: process.env.MYSQL_DB,
+    port: process.env.MYSQL_PORT,
 });
 
 // by default limit it to 100 results
